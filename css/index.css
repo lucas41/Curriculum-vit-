@@ -1,0 +1,14 @@
+
+#home{
+    font-size: 50px;
+    margin-left: 5px;
+    color: white;
+}
+body{
+    background-color: black;
+}
+
+#perfil{
+    width: 100px;
+    height: 100px;
+}
