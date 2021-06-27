@@ -1,52 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <title>Título da página</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
-    <ul id="slide-out" class="sidenav deep-orange accent-1">
-      <li><div class="user-view ">
+
+<head>
+  <title>Título da página</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <ul id="slide-out" class="sidenav deep-orange accent-1">
+    <li>
+      <div class="user-view ">
         <div class="background">
           <img src="img/background.jpg">
         </div>
         <a href="#user"><img class="circle" id="perfil" src="img/perfil.jpg"></a>
         <a href="#name"><span class="white-text name">Melissa Gomes santana</span></a>
         <a href="#email"><span class="white-text email">Email@email.com</span></a>
-      </div></li>
-      <li><a href="#!"><i class="material-icons">account_circle</i>Sobre</a></li>
-      <li><a href="#!">Outro Link</a></li>
-      <li><a href="#!">Outro Link</a></li>
-      <li><a href="#!">Outro Link</a></li>
-    </ul>
-  </head>
-
-  <body>
-
-   
-    
-  
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons" id="home">menu</i></a>   
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">JavaScript</a></li>
-        </ul>
       </div>
-    </nav>
-    
+    </li>
+    <li><a class="scrollSuave" href="#sobre"><i class="material-icons">account_circle</i>Sobre / About </a></li>
+    <li><a class="scrollSuave" href="#experiencia"><i class="material-icons">science</i>experiência profissional</a></li>
+    <li><a class="scrollSuave" href="#formacao"><i class="material-icons">book</i>Formação Acadêmica</a></li>
+    <li><a class="scrollSuave" href="#habilidade"><i class="material-icons">edit_calendar</i>Habilidades</a></li>
+    <li><a class="scrollSuave" href="#lingua"><i class="material-icons">translate</i>Linguas</a></li>
+    <li><a class="scrollSuave" href="#contato"><i class="material-icons">perm_phone_msg</i>Contatos</a></li>
+  </ul>
+</head>
+
+<body>
 
 
-      <script src="js/jquery-3.6.0.min.js"></script>
-      <script src="js/materialize.js"></script>
-      <script type="text/javascript">
-            $( document ).ready(function() {
-              $('.sidenav').sidenav();
-            });
-    </script>
-  </body>
+
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons"
+          id="home">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+  <a id="sobre"><strong>Desliza Suavemente para aqui sobre!</strong></a>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <a id="experiencia"><strong>Desliza Suavemente para aqui experiencia!</strong></a>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <a id="formacao"><strong>Desliza Suavemente para aqui formacao!</strong></a>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <a id="habilidade"><strong>Desliza Suavemente para aqui habilidade!</strong></a>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <a id="lingua"><strong>Desliza Suavemente para aqui lingua!</strong></a>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <a id="contato"><strong>Desliza Suavemente para aqui contato !</strong></a>
+
+
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.sidenav').sidenav();
+    });
+
+    var $doc = $('html, body');
+    $('#header > a').click(function () {
+      $doc.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+      }, 500);
+      return false;
+    });
+  </script>
+</body>
+
 </html>
