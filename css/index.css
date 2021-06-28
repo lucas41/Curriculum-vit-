@@ -12,3 +12,8 @@ body{
     width: 100px;
     height: 100px;
 }
+
+.titulo{
+    position: fixed;
+    color: blue;
+}
