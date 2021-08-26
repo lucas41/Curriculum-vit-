@@ -46,25 +46,38 @@
 
 
   
-  <div id="sobre" class="row">
-   
-
+  <div class="row">
     <div class="col s12 m12 l9">
-      <div class="card">
-        <div class="card-image">
-          <img src="img/fho.jpg" >
-          <span class="card-title" style="background-color: black; border-radius: 30px; margin-bottom: 20px; margin-left: 20px;">O que ando fazendo ?</span>
-        </div>
+      <div class="card" style="height: 700px;">
         <div class="card-content">
-          <p> Estou sempre buscando aprimorar meus conhecimentos veja o que estou estudando no momento !</p>
-         <ul>
-           <li>&#127891; - Sistemas da Informação ( Gradução prevista para 2023) Pela <b> FHO - fundação herminio ometto </b></li>
-           <br>
-           <li>&#128084; - Trabalhando como TECNICO EM MANUTENÇÃO DE EQUIPAMENTOS DE INFORMATICA JR pela IT2B</li>
-           <br>
-           <li>&#9998; - Estudando C# </li>
-         </ul>
-  
+          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        </div>
+        <div class="card-tabs">
+          <ul class="tabs tabs-fixed-width">
+            <li class="tab"><a href="#test4">Test 1</a></li>
+            <li class="tab"><a class="active" href="#test5">Test 2</a></li>
+            <li class="tab"><a href="#test6">Test 3</a></li>
+          </ul>
+        </div>
+        <div class="card-content grey lighten-4">
+          <div id="test4">
+              <h2 class="header">Horizontal Card</h2>
+              <div class="card horizontal">
+                <div class="card-image">
+                  <img src="img/fho.jpg">
+                </div>
+                <div class="card-stacked">
+                  <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information.</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#">This is a link</a>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div id="test5">Test 2</div>
+          <div id="test6">Test 3</div>
         </div>
       </div>
     </div>
@@ -112,8 +125,9 @@
   <script type="text/javascript">
     $(document).ready(function () {
       $('.sidenav').sidenav();
+      $('.tabs').tabs();
     });
-
+   
     var $doc = $('html, body');
     $('#header > a').click(function () {
       $doc.animate({
