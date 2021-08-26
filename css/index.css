@@ -17,3 +17,24 @@ body{
     position: fixed;
     color: blue;
 }
+
+#background {
+    width: 300px;
+    height: 250px;
+}
+
+#icone{
+   color: white;
+}
+
+.icone{
+    
+    width: 40px;
+    height: 40px;
+}
+
+#divicon{
+    text-align: center;
+}
+
+
